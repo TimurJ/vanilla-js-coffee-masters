@@ -12,7 +12,7 @@ const proxiedStore = new Proxy(Store, {
     }
 
     if (property == 'cart') {
-      window.dispatchEvent('appcartchanged')
+      window.dispatchEvent(new Event('appcartchange'))
     }
 
     return true
